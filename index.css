@@ -1,0 +1,82 @@
+/* pie.css
+ * author:15331169 lixiaoyun
+ * last edited in 2016-09-08
+ */
+
+ #wrapper {
+ 	margin-top: -300px;
+ 	margin-left: -500px;
+ 	width: 1000px;
+ 	height: 700px;
+ 	background-image: url('http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg');
+
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ }
+
+/*-----------------heading----------------*/
+ h1, h2 {
+ 	text-align: center;
+ 	color: #A4A400;
+ 	font: bold 40pt Century Gothic, Futura, Verdana, sans-serif;
+ 	letter-spacing: 0.2em;
+ }
+
+ #container {
+ 	height: 400px;
+ 	background-color: #FFFFFF;
+	box-shadow: 1px 1px 1px #F0F0F0;
+ }
+
+h2 {
+	font-weight: normal;
+	font-size: 30pt;
+}
+
+#img {
+	float: left;
+	width: 400px;
+	height: 300px;
+	margin-left: 50px;
+}
+img {
+	border-radius: 4px;
+	margin: 0 0 0 100px;
+}
+
+#text {
+	float: left;
+}
+h3 a {
+	font: 18pt Century Gothic, Futura, Verdana, sans-serif;
+	text-decoration: none;
+	color: #A4A400;
+}
+
+h3 a:hover {
+	color: #C4C400;
+}
+
+ul {
+	list-style-image: url('http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif');
+	margin: 5px 0 0 50px;
+}
+
+ul li {
+	color: #404040;
+	font: 12pt Georgia, Garamond,sans-serif;
+	margin: 18px;
+}
+
+#text p a {
+	float: right;
+	font-size: 10pt;
+	text-decoration: none;
+	color: #A4A400;
+}
+
+#text p a:hover {
+	color: #C4C400;
+}
+
