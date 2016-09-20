@@ -1,14 +1,10 @@
 /* author: 15331169 lixiaoyun
- * last edited in 2016-09-14
- * bug: w3c links's floating problem
+ * last edited in 2016-09-18
  */
 
-* {
+body {
 	font-family: Verdana, Tahoma, sans-serif;
 	font-size: 8pt;
-}
-
-body {
 	margin: 0;
 	padding: 0;
 }
@@ -19,6 +15,7 @@ body {
 
 #banner {
 	background-image: url('http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/bannerbackground.png?version=1&modificationDate=1268896312000');
+	background-repeat: repeat-x;
 	height: 50px;
 	text-align: center;
 }
@@ -28,17 +25,46 @@ h1 {
 	font: bold 24pt Tahoma, Verdana, sans-serif;
 }
 
-/*----------the main content-----------*/
+/*------------------the main content-----------------------*/
 #container {
 	width: 800px;
 	margin: 0 auto;
 	border: 4px solid gray;
+	overflow: hidden;
 }
 
-/*------------main content's title--------*/
-#image {
-	background-image: url('http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png?version=1&modificationDate=1268896385000');
+
+
+/*-----------------------------overview---------------------*/
+#overview {
+	float: right;
+	width: 250px;
+	background-color: #A2B964;
+}
+
+#overview-content {
+	margin: 10px;
+}
+
+#overview {
+	font-family: Arial, sans-serif;
+}
+
+#overview-content dl dt {
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+/*--------------------------review-------------------------*/
+#left-central-section {
+	float: right;
 	width: 550px;
+}
+
+/*-------------------review's title-----------------------*/
+#rotten {
+	background-image: url('http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png?version=1&modificationDate=1268896385000');
+	background-repeat: repeat-x;
 	height: 83px;
 }
 
@@ -54,30 +80,7 @@ h1 {
 	font-size: 8pt;
 	font-weight: normal;
 }
-
-/*----------------overview-----------*/
-#overview {
-	float: right;
-	width: 250px;
-	background-color: #A2B964;
-}
-
-#overview-content {
-	margin: 10px;
-}
-
-#overview-content dl dd{
-	font-family: Arial, sans-serif;
-}
-
-#overview-content dl dt {
-	font-weight: bold;
-	margin-top: 1em;
-	font-family: Arial, sans-serif;
-}
-
-/*---------------review-------------*/
-#content {
+#review {
 	width: 550px;
 	float: right;
 }
@@ -101,32 +104,32 @@ h1 {
 	margin-right: 5px;
 }
 
-.information span {
+.personal-information span {
 	font-style: italic;
 }
 
-.information img {
+.personal-information img {
 	float: left;
 	margin-right: 5px;
 }
 
-.review {
+.review-content {
 	margin-bottom: 3em;
 }
 
-/*-------------------bottom---------------*/
-#bottom {
+/*--------------------------footer-------------------------*/
+#footer {
 	background-color: #A2B964;
 	clear: right;
 }
 
-#bottom p {
+#footer p {
 	text-align: center;
 	padding: 5px 0 5px 0;
 	margin: 0;
 }
 
-/*-----------------------W3C links--------------*/
+/*----------------------------W3C links------------------------*/
 #W3C-Validator {
 	position: fixed;
 	bottom: 0;
