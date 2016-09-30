@@ -1,0 +1,298 @@
+/* 
+ * Hw3: Ring Menu;
+ * author: 15331169 lixiaoyun;
+ * last edit in 2016/09/24
+ */
+
+html, body {
+	margin: 0;
+ 	height: 100%;
+ 	width: 100%;
+ 	font-family: Arial, sans-serif;
+	font-size: 13pt;
+ }
+
+#at-plus-container {
+	height: 30px;
+	width: 30px;
+	left: 50%;
+	margin-left: -15px;
+	bottom: 0px;
+	color: white;
+	position: absolute;
+}
+
+ul {
+	list-style: none;
+}
+
+/*----------button-container--------*/
+
+/*---------------info bar----------------*/
+#info-bar {
+	opacity: 0;
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	bottom: 100px;
+	left: 50%;
+	background-color: #888888;
+	border-radius: 50%;
+	position: absolute;
+	
+}
+
+.info {
+	height: 130px;
+	width: 130px;
+	left: 50%;
+	margin-left: -65px;
+	position: absolute;
+}
+
+.info .user {
+	top: 8px;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.info .comment {
+	font-size: 24pt;
+	top: 40px;
+	left: 31px;
+	position: absolute;
+}
+
+.info .comment img {
+	height: 25px;
+	width: 25px;
+}
+
+.info .mine {
+	color: rgb(52, 220, 180);
+	top: 100px;
+	position: absolute;
+}
+
+.info .posted {
+	left: 21px;
+	top: 90px;
+	position: absolute;
+}
+
+.info .like {
+	left: 70px;
+	top: 90px;
+	position: absolute;
+}
+
+
+.info ul li img {
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+
+/*---------control ring-----------*/
+#control-ring li {
+	left: 50%;
+	bottom: 100px;
+	margin-left: -15px;
+	position: absolute;
+}
+
+#control-ring li, #control-ring li span {
+	opacity: 0;
+}
+
+.button {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #555555;
+}
+
+.mask {
+	background: url('assets/images/nomask.png') no-repeat center;
+	background-size: 50% 50%;
+}
+
+.history {
+	background: url('assets/images/history.png') no-repeat center;
+	background-size: 50% 50%;
+}
+
+.message {
+	background: url('assets/images/message.png') no-repeat center;
+	background-size: 50% 50%;
+	position: relative;
+}
+
+.unread {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: #EF3636;
+	top: -40px;
+	right: -61px;
+	font-size: 10pt;
+	text-align: center;
+	line-height: 18px;
+	position: absolute;
+}
+
+.setting {
+	background: url('assets/images/setting.png') no-repeat center;
+	background-size: 50% 50%;
+}
+
+.sign {
+	background: url('assets/images/signin.png') no-repeat center;
+	background-size: 50% 50%;
+}
+
+.button {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #555555;
+}
+
+/*---------at-plus-button---------------*/
+.apb {
+	height: 30px;
+	width: 30px;
+	background: #aaaaaa;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -15px;
+	bottom: 100px;
+	position: absolute;
+}
+
+.apb .icon {
+	height: 19px;
+	width: 80%;
+	background: url('assets/images/atplus_white.png') no-repeat;
+	background-size: contain;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+/*-----transition------------*/
+#info-bar {
+	transition: all 0.5s 0.2s;
+	-webkit-transition: all 0.5s 0.2s;
+	-moz-transition: all 0.5s 0.2s;
+}
+
+#button, .button{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+ .apb {
+	transition: all 0.5s 0.5s;
+	-webkit-transition: all 0.5s 0.5s;
+	-moz-transition: all 0.5s 0.5s;
+}
+
+/*----------hover----------*/
+#at-plus-container:hover {
+	height: 300px;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+/*--------at-plus:  hover------------*/
+
+#at-plus-container:hover #info-bar, .button{
+	transition: all 0.5s 0.2s;
+	-webkit-transition: all 0.5s 0.2s;
+	-moz-transition: all 0.5s 0.2s;
+}
+
+#at-plus-container:hover .info {
+	left: 50%;
+	margin-left: -65px;
+	position: absolute;
+}
+
+#at-plus-container:hover .apb {
+	transform: scale(1.5, 1.5);
+	background-color: rgba(48, 63, 159, 1);
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+#at-plus-container:hover .apb .icon {
+	background: url('assets/images/atplus_green.png') no-repeat;
+	background-size: contain;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+/*----------------info-bar:  hover----------*/
+#at-plus-container:hover #info-bar {
+	opacity: 1;
+	height: 130px;
+	width: 130px;
+	/*-----translate-------*/
+	transform: translate(-63px, -46px);
+	-moz-transform: translate(-63px, -46px);
+	-webkit-transform: translate(-63px, -46px);
+	-o-transform: translate(-63px, -46px);
+}
+
+/*-------control-ring: hover--------------*/
+#at-plus-container:hover .mask {
+	opacity: 1;
+	transform: translate(-58px, -32px);
+	-moz-transform: translate(-58px, -32px);
+	-webkit-transform: translate(-58px, -32px);
+	-o-transform: translate(-58px, -32px);
+}
+
+#at-plus-container:hover .history {
+	opacity: 1;
+	transform: translate(-70px, 2px);
+	-moz-transform: translate(-70px, 2px);
+	-webkit-transform: translate(-70px, 2px);
+	-o-transform: translate(-70px, 2px);
+}
+
+#at-plus-container:hover .message, #button ul li .unread{
+	opacity: 1;
+	transform: translate(-56px, 35px);
+	-moz-transform: translate(-56px, 35px);
+	-webkit-transform: translate(-56px, 35px);
+	-o-transform: translate(-56px, 35px);
+}
+
+#at-plus-container:hover .setting {
+	opacity: 1;
+	transform: translate(-23px, 56px);
+	-moz-transform: translate(-23px, 56px);
+	-webkit-transform: translate(-23px, 56px);
+	-o-transform: translate(-23px, 56px);
+}
+
+#at-plus-container:hover .sign {
+	opacity: 1;
+	transform: translate(16px, 52px);
+	-moz-transform: translate(16px, 52px);
+	-webkit-transform: translate(16px, 52px);
+	-o-transform: translate(16px, 52px);
+}
+
