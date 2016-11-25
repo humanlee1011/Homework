@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>软4主页</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header mdl-layout--grey-100 mdl-color-text--grey-600 is-casting-shadow">
+			<div class="mdl-layout__drawer-button" aria-hidden="true">
+				<i class="material-icons">menu</i>
+			</div>
+			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-layout__header-row">
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer">
+				</div>
+				<!-- top-nav -->
+				<nav class="mdl-navigation">
+					<a id="submit-homework-button" class="mdl-navigation__link" href="#">作业提交</a>
+					<a id="homework-inform-button" class="mdl-navigation__link" href="#">
+					作业通知</a>
+					<a id="is-finished-button" class="mdl-navigation__link" href="" ef="#">
+					完成情况</a>
+				</nav>
+		</header>
+
+		<div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50 is-visible" aria-hidden="false">
+			<!-- 头像 -->
+			<header class="avatar-header">
+				<div id="user-image">
+					<img src="images/user.jpg" class="avatar">
+				</div>
+				<p class="username">Human Lee</p>
+			</header>
+
+			<nav class="left-navigation mdl-navigation mdl-color--blue-grey-800">
+				<a id="homepage" class="mdl-navigation__link" href="#">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+					home</i>主页
+				</a>
+				<a id="homework" class="mdl-navigation__link" href="#">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment
+					</i>作业部落
+				</a>
+				<a id="forum" class="mdl-navigation__link" href="#">
+					<i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum
+					</i>讨论墙
+				</a>
+			</nav>
+		</div>
+
+		<!-- 主体内容 -->
+		<div id="main-body" class="mdl-layout__content mdl-color--grey-100 mdl-color-text--grey-600">
+			<form id="homework-form" class="mdl-color--white mdl-shadow--2dp">
+				<div class="form-content">
+					<label for="courses-name">
+						课程
+					</label>
+					<select id="courses-select" name="courses-name">
+						<option value="digital-circuits">数电</option>
+						<option value="pobability-and-statistics">概统</option>
+					</select>
+				</div>
+				<div class="form-content">
+					<label for="homework-name">
+						作业
+					</label>
+					<select id="homework-select" name="homework-name">
+						<option value="digital-circuits">数电</option>
+						<option value="pobability-and-statistics">概统</option>
+					</select>
+				</div>
+				<div class="form-content">
+					<label for="file">
+						文件上传
+					</label>
+					<input type="file" name="homeword-file" id="homeword-file">
+				</div>
+				<input type="submit" class="mdl-button mdl-js-button mdl-button--raised" name="submit" value="提交">
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>

@@ -1,0 +1,60 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", 
+             serif;
+}
+
+#wrapper > header {
+	color: white;
+}
+
+.avatar-header {
+	height: 200px;
+	text-align: center;
+	line-height: 150px;
+}
+
+.avatar-header img {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.drawer nav {
+	height: 446px;
+}
+
+.drawer nav a i {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#main-body {
+	height: 100%;
+}
+
+#homework-form {
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+	top: 50%;
+}
+
+.form-content{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+input[type=submit] {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -32px;
+}
+
+
+
