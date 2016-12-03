@@ -1,0 +1,120 @@
+/*author: 15331169 lixiaoyun
+last edited: 2016-10-15*/
+
+html, body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: "Century Gothic", Arial, sans-serif;
+}
+
+header {
+	height: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 20pt;
+	font-weight: lighter;
+}
+
+header p {
+	font-size: 15pt;
+}
+
+#Recorder {
+	height: 70px;
+	width: 350px;
+	margin: auto;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#SorS {
+	height: 20px;
+	width: 180px;
+	margin-bottom: 10px;
+}
+
+#playing {
+	height: 15px;
+	width: 175px;
+}
+
+#time, #score {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+
+#Time, #Score {
+	height: 15px;
+	width: 30px;
+}
+
+#Moles {
+	height: 145px;
+	width: 235px;
+	border-top: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+	margin: auto;
+}
+
+
+label {
+	height: 13px;
+	width: 13px;
+	background-color: #eeeeee;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 100%;
+	display: inline-block;
+	margin: 2px;
+	opacity: 0.75;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+label:hover, label span:hover, #checked:hover {
+	cursor: pointer;
+}
+
+label:active, label span:active, #checked:active {
+	opacity: 1;
+}
+
+
+
+/*------radio checked style--------*/
+#checked {
+	height: 13px;
+	width: 13px;
+	background-color: rgb(44, 140, 211);
+	border-radius: 100%;
+	display: inline-block;
+	margin: 2px;
+	opacity: 0.75;
+}
+
+#checked div {
+	height: 3px;
+	width: 3px;
+	background-color: white;
+	border-radius: 100%;
+	margin: auto;
+	margin-top: 5px;
+}
+
+footer {
+	height: 150px;
+	width: 700px;
+	margin: auto;
+	margin-top: 50px;
+	font-weight: bold;
+}
+
+footer p {
+	font-weight: lighter;
+}

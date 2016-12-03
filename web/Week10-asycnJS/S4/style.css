@@ -1,0 +1,213 @@
+/*author: lixiaoyun 15331169
+hw: week 10 async js*/
+
+html, body {
+	margin: 0;
+ 	height: 100%;
+ 	width: 100%;
+ 	font-family: Arial, sans-serif;
+	font-size: 13pt;
+ }
+
+#at-plus-container {
+	height: 30px;
+	width: 30px;
+	left: 50%;
+	margin-left: -15px;
+	bottom: 0px;
+	color: white;
+	position: absolute;
+}
+
+ul {
+	list-style: none;
+}
+
+/*----------button-container--------*/
+
+/*---------------info bar----------------*/
+#info-bar {
+	opacity: 0;
+	height: 0px;
+	width: 0px;
+	bottom: 100px;
+	left: 50%;
+	background-color: #888888;
+	border-radius: 50%;
+	position: absolute;
+	color: #51ca9f;
+}
+
+#info-bar p {
+	text-align: center;
+	margin-top: -30px;
+	color: black;
+}
+
+#Total {
+	font-weight: bold;
+	font-size: 20pt;
+	position: absolute;
+	left: 41%;
+    top: 42%;
+}
+
+
+/*---------control ring-----------*/
+#control-ring li {
+	left: 50%;
+	bottom: 100px;
+	margin-left: -15px;
+	position: absolute;
+}
+
+#control-ring li, #control-ring li span {
+	opacity: 0;
+}
+
+.button {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #555555;
+}
+
+.unread {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: #EF3636;
+	top: -40px;
+	right: -61px;
+	font-size: 10pt;
+	text-align: center;
+	line-height: 18px;
+	position: absolute;
+}
+
+.button {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #555555;
+}
+
+.button p {
+	display: inline-block;
+	margin-top: 5px;
+    margin-left: 10px;
+}
+
+/*---------at-plus-button---------------*/
+.apb {
+	height: 30px;
+	width: 30px;
+	background: #aaaaaa;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -15px;
+	bottom: 100px;
+	position: absolute;
+}
+
+.apb .icon {
+	height: 19px;
+	width: 80%;
+	background: url('../images/atplus_white.png') no-repeat;
+	background-size: contain;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+/*-----transition------------*/
+#info-bar {
+	transition: transform 0.5s 0.2s, opacity 0.5s 0.2s, height 0.5s 0.2s,
+				width 0.5s 0.2s;
+}
+
+#button, .button{
+	transition: transform 0.5s;
+}
+
+ .apb {
+	transition: all 0.5s 0.5s;
+}
+
+/*----------hover----------*/
+#at-plus-container:hover {
+	height: 300px;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+/*--------at-plus:  hover------------*/
+
+#at-plus-container:hover #info-bar, .button{
+	transition: transform 0.5s 0.2s, opacity 0.5s 0.2s, height 0.5s 0.2s,
+				width 0.5s 0.2s;
+}
+
+#at-plus-container:hover .apb {
+	transform: scale(1.5, 1.5);
+	background-color: rgba(48, 63, 159, 1);
+	transition: all 0.5s;
+}
+
+#at-plus-container:hover .apb .icon {
+	background: url('../images/atplus_green.png') no-repeat;
+	background-size: contain;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+/*----------------info-bar:  hover----------*/
+#at-plus-container:hover #info-bar {
+	opacity: 1;
+	height: 130px;
+	width: 130px;
+	/*-----translate-------*/
+	transform: translate(-63px, -46px);
+}
+
+/*-------control-ring: hover--------------*/
+#at-plus-container:hover .A {
+	opacity: 1;
+	transform: translate(-58px, -32px);
+}
+
+#at-plus-container:hover .B {
+	opacity: 1;
+	transform: translate(-70px, 2px);
+}
+
+#at-plus-container:hover .C, #button ul li .unread{
+	opacity: 1;
+	transform: translate(-56px, 35px);
+}
+
+#at-plus-container:hover .D {
+	opacity: 1;
+	transform: translate(-23px, 56px);
+}
+
+#at-plus-container:hover .E {
+	opacity: 1;
+	transform: translate(16px, 52px);
+}
+
+#at-plus-container:hover #Total {
+	font-weight: bold;
+	font-size: 20pt;
+	position: absolute;
+	left: 41%;
+    top: 42%;
+}

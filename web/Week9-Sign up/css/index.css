@@ -1,0 +1,90 @@
+/*author: 15331169lixiaoyun
+hw: week9 sign up*/
+
+body, html {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	font-family: "Century Gothic", Arial, sans-serif;
+}
+
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+	background: url('../images/Fall.jpg') repeat-x center;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+#container {
+	background-color: #FDC395;
+	position: absolute;
+	height: 350px;
+	width: 350px;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left: -175px;
+	border-radius: 10px;
+
+}
+
+h1 {
+	text-align: center;
+	font-size: 15pt;
+	
+}
+
+form {
+	height: 300px;
+	width: 300px;
+	margin: auto;
+}
+
+input[type="text"] {
+	height: 30px;
+	width: 250px;
+	margin-top: 14px;
+}
+
+img {
+	height: 32px;
+	width: 32px;
+	position: relative;
+	top: 11px;
+	margin-right: 3px;
+}
+
+p {
+	height: 10px;
+	margin: 0;
+	margin-left: 40px;
+	color: red;
+	font-family: 'Microsoft YaHei';
+}
+
+input[type="reset"], button {
+	height: 30px;
+	width: 100px;
+	border: 0;
+	background-color: #5E4850;
+	color: white;
+	position: absolute;
+	top: 305px;
+}
+
+button {
+	left: 50px;
+}
+
+input[type="reset"] {
+	right: 50px;
+}
+
+input[type="reset"]:hover, button:hover {
+	opacity: 0.7;
+}
+

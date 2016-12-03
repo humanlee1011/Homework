@@ -1,0 +1,45 @@
+/*author: 15331169lixiaoyun
+last edited: 2016-10-29*/
+
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+}
+
+h1, h2, th {
+	font-weight: bold;
+}
+
+#todo, #staff {
+	border-collapse: collapse;
+}
+
+th, td {
+	width: 150px;
+	border: 1px solid #bbbbbb;
+}
+
+th {
+	color: white;
+	text-align: left;
+	background-color: #2222AA;
+}
+
+tbody tr:nth-child(2) {
+	background-color: #dddddd;
+}
+
+.sortAscend {
+	background: url('../img/ascend.png') no-repeat right;
+}
+
+.sortDescend {
+	background: url('../img/descend.png') no-repeat right;
+}
+
+.sorted {
+	background-color: #C7D9ED;
+}
+

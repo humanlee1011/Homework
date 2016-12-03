@@ -1,0 +1,90 @@
+// author: lixiaoyun 15331169
+// hw: week 10 async js
+
+(function($) {
+	var clicked = [0, 0, 0, 0, 0];
+	var order = [1, 2, 3, 4, 5];
+	var cnt = 0;
+	var ajax;
+	$(document).ready(function() {
+		$('#at-plus-container').mouseenter(reset);
+	}); 
+
+	function reset() {
+		if (ajax)
+			ajax.abort();
+		cnt = 0;
+		$('#info-bar p').html('');
+		clicked = [0, 0, 0, 0, 0];
+		$('.button span').html('...').hide();
+		$('#Total').html('');
+		enableButton($('.button'), getRandomNumber);
+		$('.icon').unbind('click').click(startRobot);
+	}
+
+	function startRobot() {
+		order.sort(function() {
+			return Math.random() > 0.5? true: false;
+		});
+		var map = {1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E'};
+		$('#info-bar p').html(map[order[0]] + map[order[1]] + map[order[2]] + map[order[3]] + map[order[4]]);
+		console.log(order);
+		$('.button:nth-child(' + order[cnt++] + ')').click();
+	}
+
+	function enableButton($object, clickFunc){
+		$object.css('background-color', '#1F479C');
+		$object.bind('click', clickFunc);
+	}
+
+	function disableButton($object) {
+		$object.css('background-color', '#555555');
+		$object.unbind('click');//unbind click, no response being clicked
+	}
+
+	function getRandomNumber() {
+		console.log("Get");
+		var that = this;
+		$(this).find('span').show();
+		disableButton($('.button').not(this));//disable all buttons except itself
+		ajax = $.ajax({
+			url: '/upload',
+			method: 'GET',
+			success: function(responseText, textStatus) {
+				console.log("callback");
+				$(that).find('span').html(responseText);
+				clicked[$(that).index()] = parseInt(responseText);
+				disableButton($(that));
+				enableButton($('.button').filter(function(index) {
+					return !clicked[index];
+				}), getRandomNumber);
+				checkClicked();
+				if (cnt < 5) {
+					$('.button:nth-child(' + order[cnt++] + ')').click();
+				}
+			}
+		});
+		$(this).unbind('click');
+	}
+
+	function checkClicked() {
+		var isAllClicked = clicked.every(function(value) {
+			return value != 0;
+		});
+		console.log(isAllClicked);
+		console.log(clicked);
+		if (isAllClicked) {
+			enableButton($('#info-bar'), getTotal);
+			$('#info-bar').click();
+		}
+	}
+
+	function getTotal() {
+		var sum = 0;
+		clicked.forEach(function(value) {
+			sum += value;
+		});
+		$('#Total').html(sum);
+		disableButton($('#info-bar'));
+	}
+})(jQuery);
