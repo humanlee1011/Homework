@@ -1,0 +1,45 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/regist.css')
+  script(type="text/javascript" src="/javascripts/regist.js")
+
+block content
+  #wrapper
+    #container
+      h1= title
+      form(method='POST')
+        .name.input-wrapper
+          p.prefix Username:
+          input(required type="text" name="username" placeholder="Username")
+          p.repeat= username
+        .studentID.input-wrapper
+          p.prefix Student ID:
+          input(required type="text" name="studentId" placeholder="student ID")
+          p.repeat= studentId
+        .password1.input-wrapper
+          p.prefix Password:
+          input(required type='password' name='password1' placeholder="Input password")
+          p.repeat
+        .password2.input-wrapper
+          p.prefix Password:
+          input(required type='password' name='password2' placeholder="Input password again")
+          p.repeat
+        .phone.input-wrapper
+          p.prefix Phone:
+          input(required type="text" name="phone" placeholder="Phone Number")
+          p.repeat= phone
+        .mail.input-wrapper
+          p.prefix Email Address:
+          input(required type="text" name="mail" placeholder="Email Address")
+          p.repeat= mail
+        button#submit(type='submit') Submit
+      input(type="reset" name="reset" value="Reset")
+      a(href='/') Back to sign in
+    #wrong
+      p.username.wrongFormat 用户名6~18位英文字母、数字或下划线，必须以英文字母开头
+      p.studentId.wrongFormat  学号8位数字，不能以0开头
+      p.password1.wrongFormat  密码为6~12位数字、大小写字母、中划线、下划线
+      p.password2.wrongFormat  密码不一致
+      p.phone.wrongFormat  电话11位数字，不能以0开头
+      p.mail.wrongFormat  邮箱地址不正确

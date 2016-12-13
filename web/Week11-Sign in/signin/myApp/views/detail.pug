@@ -1,0 +1,25 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/detail.css')
+  script(type="text/javascript" src="/javascripts/detail.js")
+
+block content
+  #wrapper
+    #container
+      h1= title
+      form
+        .name.input-wrapper
+          p.content Username:
+          p.detail= userInfo.username
+        .studentId.input-wrapper
+          p.content Student ID:
+          p.detail= userInfo.studentId
+        .phone.input-wrapper
+          p.content Phone:
+          p.detail= userInfo.phone
+        .mail.input-wrapper
+          p.content Mail:
+          p.detail= userInfo.mail
+        p You can only assess your information
+      button.logout Log out

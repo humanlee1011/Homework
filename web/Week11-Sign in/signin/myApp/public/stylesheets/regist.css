@@ -1,0 +1,149 @@
+/*author: 15331169lixiaoyun
+hw: week9 sign up*/
+
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  background: url('../images/Fall.jpg') repeat-x center;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+#container {
+  background-color: #FDC395;
+  position: absolute;
+  height: 470px;
+  width: 400px;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -210px;
+  border-radius: 10px;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 15pt;
+}
+
+form {
+  height: 395px;
+  width: 320px;
+  margin: auto;
+}
+
+input[type="text"], input[type="password"] {
+  height: 30px;
+  width: 200px;
+}
+
+
+.prefix {
+  font-size: 10pt;
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+p {
+  color: red;
+}
+
+#wrong {
+  position: absolute;
+  top: 27%;
+  left: 66%;
+  font-size: 12pt;
+}
+
+.wrongFormat {
+  width: 250px;
+  position: absolute;
+  left: 100px;
+}
+
+.wrongFormat.username {
+  top: -11px;
+}
+
+.wrongFormat.studentId {
+  top: 53px;
+}
+
+.wrongFormat.password1 {
+  top: 103px;
+}
+
+.wrongFormat.password2 {
+  top: 163px;
+}
+
+.wrongFormat.phone {
+  top: 214px;
+}
+
+.wrongFormat.mail {
+  top: 267px;
+}
+
+/*p {
+  height: 10px;
+  margin: 0;
+  color: red;
+  font-family: 'Microsoft YaHei';
+}*/
+
+input[type="reset"], button {
+  height: 30px;
+  width: 100px;
+  border: 0;
+  background-color: #5E4850;
+  color: white;
+  position: absolute;
+  top: 405px;
+}
+
+button {
+  left: 50px;
+}
+
+input[type="reset"] {
+  right: 50px;
+}
+
+input[type="reset"]:hover, button:hover {
+  opacity: 0.7;
+}
+
+a {
+  display: inline-block;
+  height: 20px;
+  width: 140px;
+  float: right;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+p.repeat {
+  margin: 0;
+  font-size: 12pt;
+  text-align: center;
+  width: 300px;
+  height: 16px;
+}

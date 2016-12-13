@@ -1,0 +1,127 @@
+/*author: 15331169lixiaoyun
+hw: week11 sign up*/
+
+body, html {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+	background: url('../images/Fall.jpg') repeat-x center;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+#container {
+	background-color: #FDC395;
+	position: absolute;
+	height: 250px;
+	width: 400px;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left: -200px;
+	border-radius: 10px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 15pt;
+}
+
+form {
+	height: 170px;
+	width: 320px;
+	margin: auto;
+}
+
+input[type="text"], input[type="password"] {
+	height: 30px;
+	width: 200px;
+	margin-top: 14px;
+}
+
+
+.prefix {
+	font-size: 10pt;
+	width: 100px;
+	position: relative;
+	display: inline-block;
+}
+
+/*p {
+	height: 10px;
+	margin: 0;
+	color: red;
+	font-family: 'Microsoft YaHei';
+}*/
+
+input[type="reset"], button {
+	height: 30px;
+	width: 100px;
+	border: 0;
+	background-color: #5E4850;
+	color: white;
+	position: absolute;
+	top: 180px;
+}
+
+button {
+	left: 50px;
+}
+
+input[type="reset"] {
+	right: 50px;
+}
+
+input[type="reset"]:hover, button:hover {
+	opacity: 0.7;
+}
+
+a {
+	display: inline-block;
+	height: 20px;
+	width: 200px;
+	float: right;
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	opacity: 0.5;
+}
+
+.error {
+	color: red;
+	text-align: center;
+	margin-top: -2px;
+}
+
+#wrong {
+  position: absolute;
+  top: 27%;
+  left: 66%;
+  font-size: 12pt;
+}
+
+.wrongFormat {
+  width: 250px;
+  position: absolute;
+  left: 100px;
+  color: red;
+}
+
+.wrongFormat.username {
+  top: 90px;
+}
+
+.wrongFormat.password1 {
+  top: 150px;
+}

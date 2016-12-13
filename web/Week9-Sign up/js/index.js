@@ -46,7 +46,7 @@
 			alert("邮箱地址不正确");
 			return false;
 		}
-		else 
+		else
 			return true;
 	}
 })(jQuery);

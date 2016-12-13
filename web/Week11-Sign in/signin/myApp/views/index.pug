@@ -1,0 +1,24 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  script(type="text/javascript" src="javascripts/index.js")
+
+block content
+  #wrapper
+    #container
+      h1= title
+      form(method='POST')
+        .name.input-wrapper
+          p.prefix Username:
+          input(required type="text" name="username" placeholder="Username")
+        .password1.input-wrapper
+          p.prefix Password:
+          input(required type='password' name='password' placeholder="Input password")
+        p.error= error
+        button#submit(type='submit') Submit
+      input(type="reset" name="reset" value="Reset")
+      a(href='/regist') No account?Go to regist!
+    #wrong
+      p.username.wrongFormat 用户名6~18位英文字母、数字或下划线，必须以英文字母开头
+      p.password1.wrongFormat  密码为6~12位数字、大小写字母、中划线、下划线

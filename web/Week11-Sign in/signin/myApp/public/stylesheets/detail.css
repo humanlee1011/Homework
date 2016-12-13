@@ -1,0 +1,75 @@
+/*author: 15331169lixiaoyun
+hw: week11 sign up*/
+
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  background: url('../images/Fall.jpg') repeat-x center;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+#container {
+  background-color: #FDC395;
+  position: absolute;
+  height: 250px;
+  width: 400px;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -200px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 15pt;
+}
+
+form {
+  height: 205px;
+  width: 320px;
+  margin: auto;
+}
+
+form > p {
+  color: red;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.content {
+  width: 100px;
+  display: inline-block;
+  margin: 0;
+}
+
+.detail {
+  margin-top: 0px;
+  display: inline-block;
+}
+
+.logout {
+  height: 30px;
+  width: 100px;
+  border: 0;
+  background-color: #5E4850;
+  color: white;
+  position: absolute;
+  top: 210px;
+  left: 40%;
+}
+
+.logout:hover {
+  opacity: 0.7;
+}
