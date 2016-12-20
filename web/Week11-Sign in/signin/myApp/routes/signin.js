@@ -23,12 +23,16 @@ router.get('/', function(req, res, next) {
     res.redirect('/?username=' + req.session.username);
   }
   else {
-    res.render('index', { title: 'Sign In' });
+    res.redirect('/login');
   }
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('index', { title: 'Sign In' });
+})
+
 //登录提交表单处理
-router.post('/', function(req, res, next) {
+router.post('/login', function(req, res, next) {
   Handler.signInHandler(req, res);
 });
 

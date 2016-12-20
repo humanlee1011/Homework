@@ -21,6 +21,11 @@ function signInHandler(req, res) {
         //res.end("?username=" + userInfo.username);
         res.redirect('/?username=' + userInfo.username);
       }//若不正确，返回error消息
+      else {
+        res.render('index', {
+        title: 'Sign In',
+        error: 'Username or password is incorrect.'});
+      }
     }//若该用户不存在或者密码不正确
     else {
       res.render('index', {
@@ -86,8 +91,10 @@ function findUser(req, res) {
   var username = req.query.username;
   console.log(username);
   User.queryUser(username, function(userInfo) {
-    if (!userInfo.length)
+    if (!userInfo.length) {
+      console.log('why');
       res.redirect('/');
+    }
     else {
       var message = {};
       message.userInfo = userInfo[0];
